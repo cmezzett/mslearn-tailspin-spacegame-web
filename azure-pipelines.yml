@@ -5,7 +5,12 @@
 
 
 trigger:
-- master
+  branches:
+    include:
+    - '*'     # build all branches
+  paths:
+    exclude:
+    - docs/*  # exclude the docs folder
 
 pool:
   vmImage: 'Ubuntu-16.04'
